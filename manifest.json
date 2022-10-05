@@ -1,6 +1,6 @@
 {
-  "name": "Huyck Preserve Trail Map",
-  "short_name": "Huyck Map",
+  "name": "River Bend Farm Trail Map",
+  "short_name": "RBF Map",
   "description": "An offline capable map viewer with GPS integration",
   "start_url": "index.html",
   "display": "standalone",
