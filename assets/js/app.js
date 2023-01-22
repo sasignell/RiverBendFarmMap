@@ -5,10 +5,12 @@ const featureModal = new bootstrap.Modal(document.getElementById("featureModal")
 const map = L.map("map", {
   zoomSnap: L.Browser.mobile ? 0 : 1,
   tap: (L.Browser.safari && !L.Browser.mobile) ? false : true,
-  maxZoom: 20,
-  minZoom: 12,
-  zoomControl: false
-}).fitWorld();
+  maxZoom: 19,
+  center: [43.55704356,-70.531844357],
+  zoom: 18,
+  minZoom: 15,
+  zoomControl: true
+});
 
 $('.navbar-collapse a').click(function(){
   $(".navbar-collapse").collapse('hide');
@@ -128,15 +130,15 @@ const layers = {
 };
 
 
-map.on('zoomend', function () {
-  if (map.getZoom() < 12.1 && map.hasLayer(layers.overlays["Points of Interest"])) {
-      map.removeLayer(layers.overlays["Points of Interest"]);
-  }
-  if (map.getZoom() > 12.1 && map.hasLayer(layers.overlays["Points of Interest"]) == false)
-  {
-      map.addLayer(layers.overlays["Points of Interest"]);
-  }   
-});
+// map.on('zoomend', function () {
+//   if (map.getZoom() < 12.1 && map.hasLayer(layers.overlays["Points of Interest"])) {
+//      // map.removeLayer(layers.overlays["Points of Interest"]);
+//   }
+//   if (map.getZoom() > 12.1 && map.hasLayer(layers.overlays["Points of Interest"]) == false)
+//   {
+//       map.addLayer(layers.overlays["Points of Interest"]);
+//   }   
+// });
 
 /*** Begin Zoom Extent Control ***/
 L.Control.ZoomExtent = L.Control.extend({
@@ -212,12 +214,12 @@ const controls = {
 
 function ZoomToExtent() {
   //map.fitBounds(layers.basemaps["Trail Map"].options.bounds);
-  map.fitBounds([
-    [43.5610849, 
-      -70.52600],
-    [43.5503551,-70.549070898]
-  ]);
-  
+  // map.fitBounds([
+  //   [43.5610849, 
+  //     -70.52600],
+  //   [43.5503551,-70.549070898]
+  // ]);
+  map.flyTo([43.55704356,-70.531844357], 18);
 }
 
 $.getJSON("data/interactive_points.geojson", function (data) {

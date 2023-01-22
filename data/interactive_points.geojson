@@ -3,6 +3,7 @@
 "name": "interactive_points",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "name": "HQ", "icon": "Building", "description": "The place where it happens", "url_1": null, "url_1_button_label": null, "url_2": null, "url_2_button_label": null, "photo1_filename": "hq.jpg", "photo2_filename": null, "audio_filename": null, "url_3": null, "url_3_button_label": null }, "geometry": { "type": "Point", "coordinates": [ -70.531537796954169, 43.55700815536612 ] } }
+{ "type": "Feature", "properties": { "name": "Ecology School Campus", "icon": "Building", "description": "The place where it happens", "url_1": null, "url_1_button_label": null, "url_2": null, "url_2_button_label": null, "photo1_filename": "hq.jpg", "photo2_filename": null, "audio_filename": null, "url_3": null, "url_3_button_label": null }, "geometry": { "type": "Point", "coordinates": [ -70.531894805849873, 43.556539164066486 ] } },
+{ "type": "Feature", "properties": { "name": "L.L. Bean Waterfront", "icon": "Hand Launch", "description": null, "url_1": null, "url_1_button_label": null, "url_2": null, "url_2_button_label": null, "photo1_filename": null, "photo2_filename": null, "audio_filename": null, "url_3": null, "url_3_button_label": null }, "geometry": { "type": "Point", "coordinates": [ -70.531946810090972, 43.554513727939209 ] } }
 ]
 }
